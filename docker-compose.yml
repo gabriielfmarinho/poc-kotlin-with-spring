@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db-poc:
+    image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: poc
+      MYSQL_DATABASE: poc
+      MYSQL_USER: poc
+      MYSQL_PASSWORD: poc
+    ports:
+      - 3306:3306
+volumes:
+  db_data: {}

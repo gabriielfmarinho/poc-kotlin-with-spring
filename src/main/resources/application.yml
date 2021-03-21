@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    username: poc
+    password: poc
+    url: jdbc:mysql://localhost:3306/poc
+    platform: mysql
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: create-drop
+    show-sql: true

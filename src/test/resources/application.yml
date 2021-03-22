@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: ${MYSQL_USERNAME:poc}
+    password: ${MYSQL_PASSWORD:poc}
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/poc}
+    platform: mysql
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: create-drop
+    show-sql: true

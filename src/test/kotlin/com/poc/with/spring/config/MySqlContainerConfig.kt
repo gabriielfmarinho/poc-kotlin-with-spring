@@ -6,7 +6,7 @@ class MySqlContainerConfig() : MySQLContainer<MySqlContainerConfig>(IMAGE) {
 
     companion object {
 
-        private val IMAGE: String = "mysql"
+        private const val IMAGE: String = "mysql"
 
         private lateinit var container: MySqlContainerConfig
 

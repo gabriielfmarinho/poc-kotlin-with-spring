@@ -28,6 +28,7 @@ class CreateProductServiceTest(
     fun shouldThrownProductAlreadyExistsExceptionWhenRequestCreateANewProductWithEqualName() {
         val productCreateDTO = buildAProductCreateDTO("name product test one",
             "description product test one")
+        saveProductService.create(productCreateDTO)
         assertThrows<ProductAlreadyExistsException> { saveProductService.create(productCreateDTO) }
     }
 

@@ -1,4 +1,4 @@
-package com.poc.with.spring.config
+package com.poc.with.spring.integration.config
 
 import org.junit.jupiter.api.extension.BeforeAllCallback
 import org.junit.jupiter.api.extension.ExtensionContext

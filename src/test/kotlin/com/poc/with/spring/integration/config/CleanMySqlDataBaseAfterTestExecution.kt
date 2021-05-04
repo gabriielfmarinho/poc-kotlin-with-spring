@@ -1,4 +1,4 @@
-package com.poc.with.spring.config
+package com.poc.with.spring.integration.config
 
 import com.poc.with.spring.log.loggerFor
 import org.springframework.test.context.TestContext

@@ -1,4 +1,4 @@
-package com.poc.with.spring.config
+package com.poc.with.spring.integration.config
 
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.boot.test.context.SpringBootTest

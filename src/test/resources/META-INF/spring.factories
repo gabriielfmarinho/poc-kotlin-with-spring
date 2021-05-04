@@ -1,2 +1,2 @@
 org.springframework.test.context.TestExecutionListener=\
-  com.poc.with.spring.config.CleanMySqlDataBaseAfterTestExecution
+  com.poc.with.spring.integration.config.CleanMySqlDataBaseAfterTestExecution

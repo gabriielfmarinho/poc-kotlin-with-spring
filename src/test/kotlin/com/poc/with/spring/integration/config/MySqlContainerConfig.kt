@@ -1,4 +1,4 @@
-package com.poc.with.spring.config
+package com.poc.with.spring.integration.config
 
 import org.testcontainers.containers.MySQLContainer
 

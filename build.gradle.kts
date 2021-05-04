@@ -27,6 +27,7 @@ dependencies {
 	implementation("io.gitlab.arturbosch.detekt:detekt-cli:1.16.0")
 	runtimeOnly("mysql:mysql-connector-java")
 	testRuntimeOnly("mysql:mysql-connector-java")
+	testImplementation("com.tngtech.archunit:archunit:0.18.0")
 	testImplementation("org.testcontainers:mysql:1.15.2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

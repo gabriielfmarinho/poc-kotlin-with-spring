@@ -1,8 +1,9 @@
-package com.poc.with.spring.service
+package com.poc.with.spring.integration.service
 
-import com.poc.with.spring.config.IntegrationTest
+import com.poc.with.spring.integration.config.IntegrationTest
 import com.poc.with.spring.domain.dto.ProductCreateDTO
 import com.poc.with.spring.exception.ProductAlreadyExistsException
+import com.poc.with.spring.service.SaveProductService
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestMethodOrder
 import org.junit.jupiter.api.assertThrows

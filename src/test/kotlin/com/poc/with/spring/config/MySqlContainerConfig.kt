@@ -2,7 +2,7 @@ package com.poc.with.spring.config
 
 import org.testcontainers.containers.MySQLContainer
 
-class MySqlContainerConfig() : MySQLContainer<MySqlContainerConfig>(IMAGE) {
+class MySqlContainerConfig : MySQLContainer<MySqlContainerConfig>(IMAGE) {
 
     companion object {
 

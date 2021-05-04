@@ -12,7 +12,7 @@ class UpdateProductService(
     private val saveProductService: SaveProductService
 ) {
     companion object {
-        private val log = loggerFor(UpdateProductService.javaClass)
+        private val log = loggerFor(UpdateProductService::class.java)
     }
 
     fun update(productUpdateDTO: ProductUpdateDTO) {

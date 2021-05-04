@@ -11,7 +11,7 @@ class DeleteProductService(
 ) {
 
     companion object {
-        private val log = loggerFor(DeleteProductService.javaClass)
+        private val log = loggerFor(DeleteProductService::class.java)
     }
 
     @Transactional

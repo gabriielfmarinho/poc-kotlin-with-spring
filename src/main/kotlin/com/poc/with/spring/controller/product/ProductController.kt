@@ -1,6 +1,5 @@
 package com.poc.with.spring.controller.product
 
-import com.poc.with.spring.controller.product.MediaTypes.Companion.MEDIA_TYPE_V1
 import com.poc.with.spring.controller.product.request.CreateProductRequest
 import com.poc.with.spring.controller.product.request.UpdateProductRequest
 import com.poc.with.spring.controller.product.response.ProductResponse
@@ -15,7 +14,16 @@ import com.poc.with.spring.service.UpdateProductService
 import org.springframework.data.domain.Page
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.DeleteMapping
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PatchMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/products")
@@ -27,7 +35,7 @@ class ProductController(
 ) {
 
     companion object {
-        val log = loggerFor(ProductController.javaClass)
+        val log = loggerFor(ProductController::class.java)
     }
 
     @PostMapping(produces = [MEDIA_TYPE_V1], consumes = [MEDIA_TYPE_V1])
@@ -52,7 +60,8 @@ class ProductController(
     }
 
     @GetMapping("/all", produces = [MEDIA_TYPE_V1], consumes = [MEDIA_TYPE_V1])
-    fun getAllPageable(@RequestParam page: Int, @RequestParam quantityPerPage: Int ): ResponseEntity<Page<ProductResponse>> {
+    fun getAllPageable(@RequestParam page: Int, @RequestParam quantityPerPage: Int ):
+            ResponseEntity<Page<ProductResponse>> {
         log.info("receive request, find all product pageable")
         return ResponseEntity.ok(findProductService.findByAll(page, quantityPerPage)
             .map { productDTO -> productDTO.toProductResponse() })

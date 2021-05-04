@@ -16,7 +16,7 @@ class FindProductService(
 ) {
 
     companion object {
-        private val log = loggerFor(FindProductService.javaClass)
+        private val log = loggerFor(FindProductService::class.java)
     }
 
     fun findById(id: Long): ProductDTO {

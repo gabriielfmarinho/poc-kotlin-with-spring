@@ -14,7 +14,7 @@ class SaveProductService(
 ) {
 
     companion object {
-        private val log = loggerFor(SaveProductService.javaClass)
+        private val log = loggerFor(SaveProductService::class.java)
     }
 
     fun create(productCreateDTO: ProductCreateDTO) {

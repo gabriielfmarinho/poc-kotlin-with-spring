@@ -13,7 +13,7 @@ import javax.sql.DataSource
 class CleanMySqlDataBaseAfterTestExecution : TestExecutionListener {
 
     companion object {
-        private val log = loggerFor(CleanMySqlDataBaseAfterTestExecution.javaClass)
+        private val log = loggerFor(CleanMySqlDataBaseAfterTestExecution::class.java)
     }
 
     private lateinit var dataSource: DataSource
